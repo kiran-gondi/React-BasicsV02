@@ -4,6 +4,7 @@ import UseMemo from './Hooks/useMemo';
 import UseRef from './Hooks/useRef';
 import UseLayoutEffectHook from './Hooks/useLayoutEffect';
 import React from 'react';
+import UseCustomHook from "./Hooks/useCustomHookUse";
 
 function App() {
   //UseCallbackParent
@@ -16,8 +17,10 @@ function App() {
   //return (<UseRef></UseRef>);
 
   //UseLayoutEffect
-  return (<UseLayoutEffectHook></UseLayoutEffectHook>);
+  //return (<UseLayoutEffectHook></UseLayoutEffectHook>);
 
+  //UseCustomHook
+  return (<UseCustomHook></UseCustomHook>);
 }
 
 export default App;
