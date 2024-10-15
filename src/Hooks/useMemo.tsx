@@ -2,8 +2,8 @@ import {useMemo} from 'react';
 
 const UseMemo = ({data}) => {
 
-    const processData = ()=>{
-         alert("hello");
+    const processData = (data: any)=>{
+         //alert("hello");
          return "hello";
     };
 
