@@ -8,6 +8,9 @@ import UseCustomHook from "./Hooks/useCustomHookUse";
 import ConstructorExample from './LifeCycle/constructorExample';
 import StateComponent from './LifeCycle/stateExample';
 import CompnenetDidMount from "./LifeCycle/componentDidMountExample";
+import ControlledComponent from "./ControlledUnControlled/controlled";
+import UnControlledComponent from "./ControlledUnControlled/uncontrolled";
+
 
 function App() {
   //UseCallbackParent
@@ -33,6 +36,12 @@ function App() {
 
   //Lifecycle - ComponenetDidMount
   //return(<CompnenetDidMount></CompnenetDidMount>);
+
+  //Controlled-Component
+  //return(<ControlledComponent></ControlledComponent>);
+
+  //UnControlled-Component
+  return(<UnControlledComponent></UnControlledComponent>);
   
 }
 
