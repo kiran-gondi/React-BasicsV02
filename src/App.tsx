@@ -3,7 +3,6 @@ import UseCallbackParent from './Hooks/useCallbackParent';
 import UseMemo from './Hooks/useMemo';
 import UseRef from './Hooks/useRef';
 import UseLayoutEffectHook from './Hooks/useLayoutEffect';
-import React from 'react';
 import UseCustomHook from "./Hooks/useCustomHookUse";
 import ConstructorExample from './LifeCycle/constructorExample';
 import StateComponent from './LifeCycle/stateExample';
@@ -11,6 +10,8 @@ import CompnenetDidMount from "./LifeCycle/componentDidMountExample";
 import ControlledComponent from "./ControlledUnControlled/controlled";
 import UnControlledComponent from "./ControlledUnControlled/uncontrolled";
 
+import React, {lazy, Suspense} from "react";
+const CodeSplit = lazy(() => import("./CodeSplitting/codesplit"));
 
 function App() {
   //UseCallbackParent
@@ -41,7 +42,16 @@ function App() {
   //return(<ControlledComponent></ControlledComponent>);
 
   //UnControlled-Component
-  return(<UnControlledComponent></UnControlledComponent>);
+  //return(<UnControlledComponent></UnControlledComponent>);
+
+  //Code Splitting
+  return(
+    <div>
+        <Suspense fallback={<div>Loading....</div>}>
+            <CodeSplit></CodeSplit>
+        </Suspense>
+    </div>
+  );
   
 }
 
